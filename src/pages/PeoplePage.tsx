@@ -75,12 +75,6 @@ const Page: React.FC = () => {
                     {person.work}
                     <br />
                   </IonLabel>
-                  <IonAvatar>
-                    <img
-                      src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
-                      alt="avatar"
-                    ></img>
-                  </IonAvatar>
                 </IonItem>
               );
             })}
