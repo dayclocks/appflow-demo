@@ -7,12 +7,11 @@ import {
   IonListHeader,
   IonMenu,
   IonMenuToggle,
+} from "@ionic/react";
 
-} from '@ionic/react';
-
-import { useLocation } from 'react-router-dom';
-import {  people, home, business, newspaper, calendar} from 'ionicons/icons';
-import './Menu.css';
+import { useLocation } from "react-router-dom";
+import { people, home, business, newspaper, calendar } from "ionicons/icons";
+import "./Menu.css";
 
 interface AppPage {
   url: string;
@@ -23,35 +22,35 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Home',
-    url: '/page/Home',
+    title: "Home",
+    url: "/page/Home",
     iosIcon: home,
-    mdIcon: home
+    mdIcon: home,
   },
   {
-    title: 'Onze mensen',
-    url: '/page/Mensen',
+    title: "People",
+    url: "/page/People",
     iosIcon: people,
-    mdIcon: people
+    mdIcon: people,
   },
   {
-    title: 'Events',
-    url: '/page/Events',
+    title: "Events",
+    url: "/page/Events",
     iosIcon: calendar,
-    mdIcon: calendar
+    mdIcon: calendar,
   },
   {
-    title: 'Nieuws',
-    url: '/page/Nieuws',
+    title: "News",
+    url: "/page/News",
     iosIcon: newspaper,
-    mdIcon: newspaper
+    mdIcon: newspaper,
   },
   {
-    title: 'Werkplek',
-    url: '/page/Werkplek',
+    title: "Workplace",
+    url: "/page/Workplace",
     iosIcon: business,
-    mdIcon: business
-  }
+    mdIcon: business,
+  },
 ];
 
 const Menu: React.FC = () => {
@@ -62,12 +61,24 @@ const Menu: React.FC = () => {
       <IonContent>
         <IonList id="inbox-list">
           <IonListHeader>Trivento</IonListHeader>
-          
+
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
-                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
-                  <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
+                <IonItem
+                  className={
+                    location.pathname === appPage.url ? "selected" : ""
+                  }
+                  routerLink={appPage.url}
+                  routerDirection="none"
+                  lines="none"
+                  detail={false}
+                >
+                  <IonIcon
+                    slot="start"
+                    ios={appPage.iosIcon}
+                    md={appPage.mdIcon}
+                  />
                   <IonLabel>{appPage.title}</IonLabel>
                 </IonItem>
               </IonMenuToggle>
