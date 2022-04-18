@@ -34,6 +34,12 @@ const Page: React.FC = () => {
       phone: "06-12345678",
       work: "Trivento",
     },
+    {
+      name: "Damaris",
+      email: "henk.jurriens@gmail.com",
+      phone: "06-12345678",
+      work: "Trivento",
+    },
   ];
 
   return (
